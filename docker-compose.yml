@@ -1,0 +1,32 @@
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.runCommand({ ping: 1 })"]
+      interval: 10s
+      retries: 5
+
+  backend:
+    build: ./server
+    container_name: backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./server/.env
+    depends_on:
+      mongo:
+        condition: service_healthy
+
+  frontend:
+    build: ./client
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  mongo_data:
