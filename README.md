@@ -48,11 +48,11 @@ understand how each service gets built and run in isolation.
 ## Screenshots
 
 ### UI and Add Item
-![Add](screenshots/add-item.png)
+![Add](Screenshot/add-item.png)
 
 ### Docker Running
-![Docker](screenshots/docker.png)
+![Docker](Screenshot/docker.png)
 
 ### Containers created
-![container](screenshots/containers.png)
+![container](Screenshot/containers.png)
 
