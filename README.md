@@ -45,3 +45,14 @@ by using `mongodb` as the hostname instead of `localhost`.
 Writing separate Dockerfiles for the frontend and backend also helped me
 understand how each service gets built and run in isolation.
 
+## Screenshots
+
+### UI and Add Item
+![Add](screenshots/add-item.png)
+
+### Docker Running
+![Docker](screenshots/docker.png)
+
+### Containers created
+![container](screenshots/containers.png)
+
